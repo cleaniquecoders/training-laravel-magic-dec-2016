@@ -2,6 +2,7 @@
 
 @section('content')
 	<div class="container">
+		<a href="{{ route('users.create') }}" class="btn btn-success pull-right" >Add New User</a>
 		{{ $users->links() }}
 		<table class="table table-condensed table-hover">
 			<thead>
