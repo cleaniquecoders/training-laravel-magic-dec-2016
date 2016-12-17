@@ -1,4 +1,81 @@
-# How to create a page?
+# Section 1: Data Preparation
+
+## Create model & migration script
+
+```
+php artisan make:model Post -m
+```
+
+## Setup migration script schema
+
+```php
+Schema::create('posts', function (Blueprint $table) {
+    $table->increments('id');
+    $table->string('post');
+    $table->timestamps();
+});
+```
+
+## Setup fillable
+
+```php
+protected $fillable = [
+    'post',
+];
+```
+
+## Run migration scripts
+
+```
+php artisan migrate
+```
+
+## Setup Factory
+
+```php
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+    return [
+        'post' => $faker->sentence,
+    ];
+});
+```
+
+## Setup Seeder
+
+```
+php artisan make:seeder PostTableSeeder
+```
+
+```php
+public function run()
+{
+    Post::truncate();
+    factory(App\Post::class, 100)->create();
+    $this->command->info('Post table seeded');
+}
+```
+
+## Seed the Data
+
+Call `PostTableSeeder` class in `DatabaseSeeder.php`
+
+```php
+$this->call(PostTableSeeder::class);
+```
+
+and run the following command
+
+```
+php artisan db:seed
+```
+
+OR you can call specific seeder class by passing `--class=` option.
+
+```
+php artisan db:seed --class=PostTableSeeder
+```
+
+# Section 2: How to create a page?
 
 1. Route, View(closure)
 2. Route, Controller & View (string)
