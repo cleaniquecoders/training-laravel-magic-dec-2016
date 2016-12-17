@@ -25,3 +25,5 @@ Route::get('/nak/nama/apa/pun/boleh', function () {
 
 // Route::get('/users', 'UserController@index');
 Route::resource('users', 'UserController');
+\App\Routes\Post::routes();
+\App\Routes\V1\Post::routes();

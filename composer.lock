@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed9df8b872992035f068a7fe461a635a",
-    "content-hash": "76036da3b5b55b91dbe1e1affa01bf9e",
+    "hash": "29c3a06799ba2fab85d6a15546bb8e9a",
+    "content-hash": "581005998f5ec47c5759e5a165ff8e96",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -60,6 +60,43 @@
                 "preload"
             ],
             "time": "2016-09-16 12:50:15"
+        },
+        {
+            "name": "cleaniquecoders/artisan-extended",
+            "version": "v1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleaniquecoders/artisan-extended.git",
+                "reference": "6bd79ad3803b9372037f8c0bb1396b06f240f587"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/6bd79ad3803b9372037f8c0bb1396b06f240f587",
+                "reference": "6bd79ad3803b9372037f8c0bb1396b06f240f587",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "5.3.*",
+                "illuminate/support": "5.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CleaniqueCoders\\ArtisanExtended\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasrul Hazim",
+                    "email": "nasrulhazim.m@gmail.com"
+                }
+            ],
+            "description": "Laravel Artisan Extended Commands",
+            "time": "2016-12-14 01:25:03"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
