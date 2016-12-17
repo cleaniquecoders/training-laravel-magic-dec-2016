@@ -7,7 +7,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Add New User</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('users.store') }}">
+                    <form
+                    class="form-horizontal"
+                    role="form"
+                    method="POST"
+                    action="{{ route('users.store') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

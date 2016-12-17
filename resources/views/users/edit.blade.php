@@ -5,9 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Add New User</div>
+                <div class="panel-heading">Edit User</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('users.update', ['id' => $user->id]) }}">
+                    <form class="form-horizontal" role="form"
+                    method="POST"
+                    action="{{ route('users.update', ['id' => $user->id]) }}">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

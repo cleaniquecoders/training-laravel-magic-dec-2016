@@ -31,20 +31,20 @@
 
 								<a href="{{ route('users.destroy', ['id' => $user->id]) }}"
 									class="btn btn-danger"
-                                    onclick="event.preventDefault();
-                                    		if(confirm('Are you sure want to delete the record?')) {
-                                             document.getElementById('delete-user-{{ $user->id }}').submit();
-                                    		}">
-                                    Delete
-                                </a>
+								    onclick="event.preventDefault();
+								    		if(confirm('Are you sure want to delete the record?')) {
+								             document.getElementById('delete-user-{{ $user->id }}').submit();
+								    		}">
+								    Delete
+								</a>
 
-                                <form id="delete-user-{{ $user->id }}"
-                                	action="{{ route('users.destroy', ['id' => $user->id]) }}"
-                                	method="POST"
-                                	style="display: none;">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-                                </form>
+					            <form id="delete-user-{{ $user->id }}"
+					            	action="{{ route('users.destroy', ['id' => $user->id]) }}"
+					            	method="POST"
+					            	style="display: none;">
+					                {{ csrf_field() }}
+					                {{ method_field('DELETE') }}
+					            </form>
 
 							</div>
 						</td>
